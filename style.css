@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    margin-top: 10px;
+    display: flex;
+}
+
+header h1{
+    margin: 10px;
+    color: burlywood;
+}
+
+header nav{
+    display: flex;
+    padding: 10px;
+    color: black;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+
+header nav a{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+header nav button{
+    background-color: rgb(22, 24, 172);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+header nav button:hover{
+    background-color: rgb(48, 156, 156);
+}
