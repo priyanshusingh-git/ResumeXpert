@@ -1,39 +1,82 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
 }
 
-header{
-    margin-top: 10px;
+body {
+    font-family: Arial, sans-serif;
+}
+
+a {
+    font-size: large;
+    text-decoration: none;
+}
+
+header {
+    align-items: center;
+    margin-top: 5px;
     display: flex;
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    z-index: 1000;
 }
 
-header h1{
+header h1 {
     margin: 10px;
     color: burlywood;
 }
 
-header nav{
+nav {
+    align-items: center;
     display: flex;
+    margin-left: auto;
     padding: 10px;
-    color: black;
-    border: 2px solid whitesmoke;
+    border: 2px solid white;
     border-radius: 20px;
-    background-color: antiquewhite;
 }
 
-header nav a{
+.nav_link {
+    margin-left: 50px; 
+    color: black;
+}
+
+.nav_button {
+    margin-left: 100px;
+}
+
+.nav_button-link {
     text-decoration: none;
-    font-size: large;
+    color: white;
+    margin-left: 30px;
+    background-color: rgb(22, 155, 172);
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.nav_button-link:hover {
+    background-color: rgba(28, 180, 180, 0.747);
+}
+
+main {
+    padding-top: 80px;
+    background-color: rgb(241, 240, 240);
+    align-items: center;
     color: black;
+    font-weight: 200;
 }
 
-header nav button{
-    background-color: rgb(22, 24, 172);
-    padding: 5px;
-    border-radius: 20px;
+main p {
+    padding: 10px;
+    text-align: center;
 }
 
-header nav button:hover{
-    background-color: rgb(48, 156, 156);
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.733);
+    color: white;
+    position: relative;
 }
