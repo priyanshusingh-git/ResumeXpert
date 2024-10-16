@@ -9,11 +9,11 @@ body {
 }
 
 a {
-    font-size: large;
     text-decoration: none;
 }
 
 header {
+    height: 50px;
     align-items: center;
     margin-top: 5px;
     display: flex;
@@ -25,7 +25,7 @@ header {
 }
 
 header h1 {
-    margin: 10px;
+    margin: 5px;
     color: burlywood;
 }
 
@@ -33,7 +33,7 @@ nav {
     align-items: center;
     display: flex;
     margin-left: auto;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid white;
     border-radius: 20px;
 }
@@ -44,7 +44,7 @@ nav {
 }
 
 .nav_button {
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .nav_button-link {
@@ -52,7 +52,7 @@ nav {
     color: white;
     margin-left: 30px;
     background-color: rgb(22, 155, 172);
-    padding: 12px;
+    padding: 8px;
     border-radius: 5px;
 }
 
@@ -60,17 +60,84 @@ nav {
     background-color: rgba(28, 180, 180, 0.747);
 }
 
-main {
-    padding-top: 80px;
-    background-color: rgb(241, 240, 240);
-    align-items: center;
+main{
+    margin: 20px;
+}
+
+/* Image slider  */
+.section1 {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 550px;
     color: black;
     font-weight: 200;
 }
 
-main p {
-    padding: 10px;
+.div1_section1 {
+    width: 40%;
+    
+}
+
+.slider-container {
+    width: 70%;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 50px;
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    animation: slide 16s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex: 1 0 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide img {
+    height: 500px;
+    border-radius: 8px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+.div2_section1 {
+    width: 70%;
+    height: 100%;
+    padding-top: 100px;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+}
+
+.div2_section1 p {
+    color: rgba(61, 59, 59, 0.849);
+    padding-top: 10px;
+    text-align: center;
+}
+
+#quote{
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(245, 20, 20);
 }
 
 footer {
