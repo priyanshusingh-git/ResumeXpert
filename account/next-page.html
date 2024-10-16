@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="/ResumeXpert/home/style.css">
+    <title>Register - ResumeXpert</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a class="logo_link" href="index.html">
+                <h1>Resume Xpert</h1>
+            </a>
+        </div>
+        <nav>
+            <a class="nav_link" href="/ResumeXpert/home/index.html" aria-label="View Resume">Home</a>
+            <a class="nav_link" href="resume.html" aria-label="View Resume">Resume</a>
+            <a class="nav_link" href="cover.html" aria-label="View Cover Page">Cover Page</a>
+            <a class="nav_link" href="about.html" aria-label="Learn About Us">About Us</a>
+            <div class="nav_button">
+                <a class="nav_button-link" href="/ResumeXpert/account/login.html" aria-label="Sign In">Sign in</a>
+                <a class="nav_button-link" href="/ResumeXpert/account/register.html" aria-label="Get Started">Get Started</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <div class="register-container">
+                <h1>Additional Information</h1>
+                <form id="additionalForm">
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="father_name">Father's Name:</label>
+                        <input type="text" id="father_name" name="father_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mother_name">Mother's Name:</label>
+                        <input type="text" id="mother_name" name="mother_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marital_status">Marital Status:</label>
+                        <select id="marital_status" name="marital_status" required>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <div class="form-group extra-button">
+                        <button type="button" onclick="goBack()">Back</button>
+                        <button type="button" onclick="skipAndSubmit()">Skip</button>
+                    </div>
+                </form>
+            </div>
+        </section> 
+    </main>
+    
+    <script>
+        document.getElementById('name').value = localStorage.getItem('name');
+        document.getElementById('email').value = localStorage.getItem('email');
+
+        function goBack() {
+            window.location.href = 'register.html';
+        }
+
+        function skipAndSubmit() {
+            window.location.href = 'submit.html';
+        }
+    </script>
+</body>
+
+</html>
