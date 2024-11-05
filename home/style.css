@@ -6,17 +6,19 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(255, 255, 255);
 }
 
+/* Header  */
 a {
     text-decoration: none;
+    color: #b15411;
 }
 
 header {
     height: 50px;
     align-items: center;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     display: flex;
     position: sticky;
     top: 0;
@@ -27,17 +29,18 @@ header {
 }
 
 header h1 {
-    margin: 5px;
-    color: #8B4513;
+    font-weight: 900;
+    margin: 5px;  
 }
 
+/* Navigation */
 nav {
     align-items: center;
     display: flex;
     margin-left: auto;
     padding: 5px;
-    border: 2px solid white;
-    border-radius: 20px;
+    /* border: 2px solid white;
+    border-radius: 20px; */
 }
 
 .nav_link {
@@ -68,21 +71,32 @@ nav {
     transition: background-color 0.3s ease;
 }
 
-main{
-    margin: 20px;
+
+/* Section 1 */
+.section1{
+    margin: 10px auto;
+    width: 98%;
+    height: 560px;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+    background-image: url("/ResumeXpert/home/images/bg-img.png");
 }
 
-/* Image slider  */
-.section1 {
-    margin-top: 5px;
+
+
+/* Section 2 */
+.section2 {
+    margin-top: 20px;
     display: flex;
     width: 100%;
-    height: 550px;
+    height: 560px;
     color: black;
     font-weight: 200;
 }
 
-.div1_section1 {
+/* Image Slider */
+.div1_section2 {
     width: 40%;
 }
 
@@ -126,31 +140,163 @@ main{
     100% { transform: translateX(0); }
 }
 
-.div2_section1 {
+/* Plain Text Div 1 */
+.div2_section2 {
     width: 70%;
     height: 100%;
     padding-top: 100px;
     justify-content: center;
     text-align: center;
-    align-items: center;
 }
 
-.div2_section1 p {
+.bold{
+    font-size: xx-large;
+    font-weight: 700;
+}
+.div2_section2 p {
     color: rgba(61, 59, 59, 0.849);
     padding-top: 10px;
     text-align: center;
 }
 
-#quote{
+.quote p{
     padding-top: 20px;
     text-align: center;
-    color: rgb(245, 20, 20);
+    background: (to bottom, rgba(255,0,0,1), rgba(255,0,0,0));
 }
 
-footer {
+
+/* About Us Section */
+.about-section {
+    display: flex;
+    margin: 10px auto;
+    /* max-width: 800px; */
+    padding: 60px 100px 10px;
+    /* background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+}
+
+
+/* .side-img{
+    width: 100px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+.side-img img{
+    width: 500px;
+    height: 500px;
+} */
+
+.about-section h2 {
     text-align: center;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    position: relative;
+    color: #16a085;
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-section ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.about-section strong {
+    color: #16a085;
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #f1f1f1;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2, .footer-section h3 {
+    color: #d86411;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    color: #f9b234;
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #f9b234;
+}
+
+.social a img {
+    width: 30px;
+    margin: 0 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
 }

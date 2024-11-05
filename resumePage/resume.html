@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ResumeXpert/resumePage/resume.css">
+    <link rel="stylesheet" href="/ResumeXpert/home/style.css">
+    <title>ResumeXpert | Build Your Resume</title>
+</head>
+
+<body>
+    <header id="main-page">
+        <div class="logo">
+            <a class="web-name" href="/ResumeXpert/home/index.html">
+                <h1>Resume Xpert</h1>
+            </a>
+        </div>
+        <nav>
+            <a class="nav_link" href="/ResumeXpert/home/index.html" aria-label="View Resume">Home</a>
+            <a class="nav_link" href="/ResumeXpert/resumePage/resume.html" aria-label="View Resume">Resume</a>
+            <a class="nav_link" href="cover.html" aria-label="View Cover Page">Cover Page</a>
+            <a class="nav_link" href="#about-section" aria-label="Learn About Us">About Us</a>
+            <div class="nav_button">
+                <a class="nav_button-link" href="/ResumeXpert/account/login.html" aria-label="Sign In">Sign in</a>
+                <a class="nav_button-link" href="/ResumeXpert/account/register.html" aria-label="Get Started">Get
+                    Started</a>
+            </div>
+        </nav>
+    </header>
+    <main class="resume-section">
+        <h2>Create Your Resume</h2>
+        <form id="resumeForm">
+            <!-- Personal Information Section -->
+            <section class="form-section">
+                <h3>Personal Information</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </section>
+
+            <!-- Work Experience Section -->
+            <section class="form-section">
+                <h3>Work Experience</h3>
+                <div class="experience-group">
+                    <label for="jobTitle">Job Title:</label>
+                    <input type="text" id="jobTitle" name="jobTitle" required>
+
+                    <label for="companyName">Company Name:</label>
+                    <input type="text" id="companyName" name="companyName" required>
+
+                    <label for="jobStart">Start Date:</label>
+                    <input type="date" id="jobStart" name="jobStart" required>
+
+                    <label for="jobEnd">End Date:</label>
+                    <input type="date" id="jobEnd" name="jobEnd">
+                </div>
+                <button type="button" onclick="addExperience()">Add Another Experience</button>
+            </section>
+
+            <!-- Education Section -->
+            <section class="form-section">
+                <h3>Education</h3>
+                <div class="education-group">
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" name="degree" required>
+
+                    <label for="institution">Institution:</label>
+                    <input type="text" id="institution" name="institution" required>
+
+                    <label for="gradYear">Year of Graduation:</label>
+                    <input type="number" id="gradYear" name="gradYear" required>
+                </div>
+                <button type="button" onclick="addEducation()">Add Another Education</button>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="form-section">
+                <h3>Skills</h3>
+                <input type="text" id="skill" name="skills" placeholder="Add a skill" required>
+                <button type="button" onclick="addSkill()">Add Skill</button>
+                <div id="skillsList"></div>
+            </section>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section company-info">
+                <h2>ResumeXpert</h2>
+                <p>Your partner in crafting professional resumes.</p>
+                <p><strong>Phone:</strong> +91 1234567890</p>
+                <p><strong>Email:</strong> contact@resumexpert.com</p>
+                <p><strong>Address:</strong> Plot No. 2, APJ Abdul Kalam Rd, <br>Knowledge Park III, Greater Noida,<br>
+                    Uttar Pradesh 201306</p>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="cover.html">Cover Letter</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="#" aria-label="Follow us on Facebook"><img src="icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" aria-label="Follow us on Twitter"><img src="icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" aria-label="Follow us on LinkedIn"><img src="icons/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="#" aria-label="Follow us on Instagram"><img src="icons/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 ResumeXpert. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/ResumeXpert/resumePage/resume.js"></script>
+</body>
+
+</html>
