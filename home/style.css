@@ -102,13 +102,13 @@ nav {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 1000px;
     animation: fadeInUp 1s ease-out;
 }
 
 /* Animation for Heading */
 .animated-heading {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     margin-bottom: 20px;
     opacity: 0;
@@ -126,6 +126,7 @@ nav {
 
 /* Animation for Button */
 .animated-button {
+    text-decoration: none;
     background-color: #F42B03;
     color: #FFFFFF;
     font-size: 1.1rem;
@@ -171,20 +172,22 @@ nav {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Section Title */
 .section-title {
-    font-size: 2.8em;
-    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    font-size: 3.5em;
     margin-bottom: 40px;
     opacity: 0;
     animation: fadeInUp 1.5s ease-out forwards;
     font-weight: bold;
-    color: #F42B03;
+    color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .highlight {
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.884);
 }
 
 .sub-text {
@@ -197,7 +200,7 @@ nav {
 
 /* Features Cards */
 .features {
-    padding: 0px 150px 0px 150px;
+    padding: 0px 200px 0px 200px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -209,7 +212,7 @@ nav {
 .feature-card {
     background: #EC7505;
     color: #FFF;
-    width: 250px;
+    width: 300px;
     padding: 25px;
     border-radius: 15px;
     text-align: center;
@@ -238,7 +241,6 @@ nav {
 .icon {
     font-size: 3rem;
     color: #F42B03;
-    /* Red color for icons */
     margin-bottom: 20px;
 }
 
@@ -258,15 +260,6 @@ nav {
     color: #FFFFFF;
     padding: 50px 20px;
     text-align: center;
-}
-
-/* Section Title */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 40px;
-    animation: fadeInUp 1.5s ease-out forwards;
 }
 
 /* Steps Layout */
@@ -361,7 +354,7 @@ nav {
 
 .slider-container {
     width: 30%;
-    height: 520px;
+    height: 620px;
     background-color: white;
     overflow: hidden;
     position: relative;
@@ -611,19 +604,27 @@ Quote Slider Animation
 /* About Us Section */
 .about-section {
     display: flex;
+    justify-content: center;
     padding: 60px 20px;
     background-color: #106EBE;
     background: linear-gradient(135deg, #106EBE, #0A4A74);
     color: white;
 }
 
-.about-section p,
-.about-section h3 {
+.about-container {
+    width: 90%;
+}
+
+.about-section p {
+    font-size: 1.3em;
+    padding-left: 10px;
     color: white;
     line-height: 1.6;
 }
 
 .about-section h3 {
+    color: white;
+    line-height: 1.6;
     font-size: 1.8em;
     margin-bottom: 15px;
     font-weight: bold;
@@ -636,6 +637,7 @@ Quote Slider Animation
 }
 
 .about-section ul li {
+    font-size: 1.3em;
     margin-bottom: 10px;
     color: #f5f5f5;
 }
