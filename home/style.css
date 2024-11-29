@@ -200,7 +200,7 @@ nav {
 
 /* Features Cards */
 .features {
-    padding: 0px 200px 0px 200px;
+    padding: 0px 180px 0px 180px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -354,7 +354,7 @@ nav {
 
 .slider-container {
     width: 30%;
-    height: 620px;
+    height: 580px;
     background-color: white;
     overflow: hidden;
     position: relative;
