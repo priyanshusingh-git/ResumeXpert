@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ResumeXpert/resumePage/resume.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/ResumeXpert/home/style.css">
-    <title>ResumeXpert | Build Your Resume</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/ResumeXpert/resumePage/resume.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title>Resume Xpert | HOME</title>
 </head>
 
 <body>
@@ -20,80 +21,69 @@
         <nav>
             <a class="nav_link" href="/ResumeXpert/home/index.html" aria-label="View Resume">Home</a>
             <a class="nav_link" href="/ResumeXpert/resumePage/resume.html" aria-label="View Resume">Resume</a>
-            <a class="nav_link" href="#" aria-label="View Cover Page">Cover Page</a>
-            <a class="nav_link" href="/ResumeXpert/home/index.html#about-section" aria-label="Learn About Us">About
-                Us</a>
+            <a class="nav_link" href="#about-section" aria-label="Learn About Us">About Us</a>
+            <a class="nav_link" href="#contact" aria-label="View Cover Page">Contact Us</a>
             <div class="nav_button">
-                <a class="nav_button-link" href="/ResumeXpert/account/login.html" aria-label="Sign In">Sign in</a>
+                <a class="nav_button-link" href="/ResumeXpert/account/login.html" aria-label="Sign In">Sign In</a>
                 <a class="nav_button-link" href="/ResumeXpert/account/register.html" aria-label="Get Started">Get
                     Started</a>
             </div>
         </nav>
     </header>
-    <main class="resume-section">
-        <h2>Create Your Resume</h2>
-        <form id="resumeForm">
-            <!-- Personal Information Section -->
-            <section class="form-section">
-                <h3>Personal Information</h3>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+    <main class="resume">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        <h1>ResumeXpert</h1>
+        <div class="resume-builder">
+            <!-- User Form -->
+                <form class="resume-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="skills">Skills:</label>
+                        <textarea id="skills" rows="3" placeholder="List your skills"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Work Experience:</label>
+                        <textarea id="experience" rows="5" placeholder="Enter your work experience"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Education:</label>
+                        <textarea id="education" rows="3" placeholder="Enter your education"></textarea>
+                    </div>
+    
+                    <!-- Add more section -->
+                    <div class="dynamic-container">
+                        <!-- Dynamic blocks will be added here -->
+                    </div>
+                    <button type="button" class="add-block">Add Section</button>
+                </form>
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="address">Address:</label>
-                <textarea id="address" name="address" required></textarea>
-            </section>
-
-            <!-- Work Experience Section -->
-            <section class="form-section">
-                <h3>Work Experience</h3>
-                <div class="experience-group">
-                    <label for="jobTitle">Job Title:</label>
-                    <input type="text" id="jobTitle" name="jobTitle" required>
-
-                    <label for="companyName">Company Name:</label>
-                    <input type="text" id="companyName" name="companyName" required>
-
-                    <label for="jobStart">Start Date:</label>
-                    <input type="date" id="jobStart" name="jobStart" required>
-
-                    <label for="jobEnd">End Date:</label>
-                    <input type="date" id="jobEnd" name="jobEnd">
+            <!-- Resume Preview -->
+            <div class="resume-container">
+                <h2>Live Preview</h2>
+                <button type="button" class="download-btn" onclick="generatePDF()">Download PDF</button>
+                <div class="resume-preview">
+                    <h3>Resume</h3>
+                    <p><strong>Name:</strong> <span id="preview-name"></span></p>
+                    <p><strong>Email:</strong> <span id="preview-email"></span></p>
+                    <p><strong>Phone:</strong> <span id="preview-phone"></span></p>
+                    <p><strong>Skills:</strong> <span id="preview-skills"></span></p>
+                    <p><strong>Work Experience:</strong> <span id="preview-experience"></span></p>
+                    <p><strong>Education:</strong> <span id="preview-education"></span></p>
                 </div>
-                <button type="button" onclick="addExperience()">Add Another Experience</button>
-            </section>
+            </div>
 
-            <!-- Education Section -->
-            <section class="form-section">
-                <h3>Education</h3>
-                <div class="education-group">
-                    <label for="degree">Degree:</label>
-                    <input type="text" id="degree" name="degree" required>
-
-                    <label for="institution">Institution:</label>
-                    <input type="text" id="institution" name="institution" required>
-
-                    <label for="gradYear">Year of Graduation:</label>
-                    <input type="number" id="gradYear" name="gradYear" required>
-                </div>
-                <button type="button" onclick="addEducation()">Add Another Education</button>
-            </section>
-
-            <!-- Skills Section -->
-            <section class="form-section">
-                <h3>Skills</h3>
-                <input type="text" id="skill" name="skills" placeholder="Add a skill" required>
-                <button type="button" onclick="addSkill()">Add Skill</button>
-                <div id="skillsList"></div>
-            </section>
-
-            <button type="submit">Generate Resume</button>
-        </form>
+        </div>
     </main>
 
     <footer class="footer">
